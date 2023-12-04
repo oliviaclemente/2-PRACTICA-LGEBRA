@@ -20,9 +20,26 @@ function gauss(A)
     return (A)
 end
 
-println(gauss(D))
+println(gauss(A))
 
 """
+La función gauss realiza la eliminación gaussiana, que transforma la matriz a su forma escalonada superior. Veamos por qué este resultado tiene sentido:
+
+La Matriz Original A: La matriz A no está explícitamente definida en tu código, pero basándonos en el resultado, parece ser una matriz 3x3. Una posible matriz A podría ser [1 2 3; 4 5 6; 7 8 9] o cualquier otra matriz que, cuando se someta a la eliminación gaussiana, produzca el resultado [1 2 3; 0 -3 -6; 0 0 0].
+
+Transformación a Forma Escalonada:
+
+La primera fila de la matriz resultante es idéntica a la primera fila de A, lo que es común en la eliminación gaussiana.
+La segunda fila ha sido transformada para crear un cero debajo del primer elemento de la diagonal (en la columna 1).
+La tercera fila ha sido transformada para crear ceros debajo de los dos primeros elementos de la diagonal (en las columnas 1 y 2).
+Consistencia con la Eliminación Gaussiana: El resultado [1 2 3; 0 -3 -6; 0 0 0] indica que los pasos de eliminación gaussiana se han llevado a cabo correctamente para crear una matriz en forma escalonada. Los elementos debajo de la diagonal principal son ceros, que es el objetivo de la eliminación gaussiana.
+
+Posibles Mejoras:
+
+Tu implementación de la eliminación gaussiana no incluye la verificación de si después del pivoteo parcial (intercambio de filas cuando un elemento diagonal es cero), el elemento diagonal sigue siendo cero. Esto podría ser un problema si la matriz es singular o si hay filas que son múltiplos de otras.
+En conclusión, el resultado que obtienes es consistente con la ejecución de la eliminación gaussiana en una matriz 3x3, aunque la matriz A específica que utilizaste no está clara en el código proporcionado.
+
+
 El código que has proporcionado en Julia define una función llamada gauss que implementa el método de eliminación gaussiana para una matriz A. Este método es utilizado para simplificar sistemas de ecuaciones lineales, encontrar matrices inversas, y calcular determinantes. Aquí te explico paso a paso lo que hace la función gauss:
 
 Definición de la función gauss: La función gauss toma una matriz A como argumento.

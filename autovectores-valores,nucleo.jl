@@ -7,7 +7,10 @@ nullspace_A = nullspace(A) # núcleo de la matriz A
 
 E = eigen(A) # calcula los autovalores y autovectores de A
 
-E.values   # autovalores
+# Imprime los autovalores de A
+println("Autovalores de A: ", E.values)
+E.values
 
-E.vectors  # autovectores
-
+# Imprime los autovectores de A
+println("Autovectores de A: ", E.vectors)
+E.vectors

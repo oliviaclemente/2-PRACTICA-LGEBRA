@@ -1,4 +1,5 @@
 #Crear una función que me diga si los vectores de S son l.i., con el nombre de la funcion de abajo, tiene que devolver true si los vectores son l.i. y false si no lo son
+
 using LinearAlgebra
 function gauss(A)
     A=1.0*A
@@ -31,13 +32,18 @@ function gauss(A)
     end
     return A
 end
+
 function are_li(S)
     A=transpose(hcat(S...))
     A=gauss(A)
     n=length(A[:,1])
     if A[n,:]==zeros()
-        print("False")
+        println("False") 
     else A[n,:]!=zeros()
-        print("True")
+        println("True")
     end
 end
+
+S = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+
+are_li(S)

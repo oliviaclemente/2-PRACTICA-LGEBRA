@@ -1,4 +1,4 @@
-#Crear una función que me diga si los vectores de S son l.i., con el nombre de la funcion de abajo, tiene que devolver true si los vectores son l.i. y false si no lo son
+#Crear una función que me diga si los vectores de S son linealmente independientes, con el nombre de la funcion de abajo, tiene que devolver true si los vectores son linealmente independientes y false si no lo son
 using LinearAlgebra
 function gauss(A)
     A=1.0*A

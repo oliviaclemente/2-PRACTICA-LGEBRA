@@ -1,5 +1,8 @@
+# problema, en la funcion puede dividirse entre 0.   Solucion:
+
 using LinearAlgebra
 
+A=[1 2 3;3 5 1;1 1 2]
 function gauss(A)
     n=length(A[:,1])
     for j in 1:(length(A[:,1])-1)

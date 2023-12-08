@@ -1,27 +1,6 @@
+using LinearAlgebra
 
-function gauss(A)
-    for j in 1:(length(A[:,1])-1)
-        for i in j+1:length(A[:,1])
-            A[i,:]=A[i,:]-(A[i,j]/A[j,j])*A[j,:]
-                end
-    end
-    return A
-    end
-    gauss(A)
-    B=[1 3 5 1; 2 1 4 6; 3 3 1 5]
-
-B = [1 3 5 1; 2 1 4 6; 3 3 1 5]
-A = [1 3 2; 2 5 1; 1 1 3]
-    using LinearAlgebra
-    function gauss(A)
-    for j in 1:(length(A[:,1])-1)
-        for i in j+1: length(A[:,1])
-            A[i,:] = A[i,:] - (A[i,j] / A[j,j]) * A[j,:]
-        end
-    end
-    return A
-end
-
+S = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
 
 function son_linealmente_independientes(S)
     # Convertir los vectores en una matriz
@@ -68,14 +47,6 @@ end
 return true
 end
 
-# Ejemplo de uso:
-S = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+
 resultado = son_linealmente_independientes(S)
 println("¿Los vectores son linealmente independientes? $resultado")
-
-
-
-
-
-
-

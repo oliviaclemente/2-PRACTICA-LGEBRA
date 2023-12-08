@@ -12,3 +12,5 @@ function find_basis(S)
     end
     return D
 end
+
+

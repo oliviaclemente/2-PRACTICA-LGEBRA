@@ -1,5 +1,5 @@
 """
-Crear una funci ́on dimension(S) que reciba como 
+Crear una funci on dimension(S) que reciba como 
 parametro una lista S de vectores de Rn y devuelva 
 la dimension del subespacio que generan
 """

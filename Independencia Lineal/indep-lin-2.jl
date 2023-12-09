@@ -28,8 +28,6 @@ function son_linealmente_independientes(S)
         end
 
 
-
-
       # Hacer ceros en la columna por debajo del pivote
       for i = (j + 1):size(A, 1)
         factor = A[i, j] / A[j, j]

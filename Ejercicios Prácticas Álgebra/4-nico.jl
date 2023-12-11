@@ -1,33 +1,27 @@
-"""
-Crear una función markov(A, v, k) que reciba como parámetros una matriz A tal que las coordenadas de cada columna suman 1, un vector de probabilidad v 
-(sus coordenadas suman 1) y un número natural k y devuelva el valor del paso k de la cadena de Markov dada por x_0=v y x_n+1=A*x_n.
-"""
-
-# Sólución
-"""
-La función markov(A, v, k) que quiero implementar en Julia simulará un proceso de Markov. En un proceso de Markov, el estado en el paso n+1 se calcula como el producto 
-de la matriz de transición A por el vector de estado en el paso n. Comenzando con un vector de probabilidad inicial v y repitiendo este proceso k veces, podemos encontrar 
-el estado de la cadena de Markov en el paso k.
-"""
-
 function markov(A, v, k)
-    # Verificar que las sumas de las columnas de A sean 1
-    for col in eachcol(A)
-        if sum(col) != 1
-            error("Las columnas de la matriz A deben sumar 1.")
-        end
-    end
-
-    # Verificar que la suma de los elementos de v sea 1
-    if sum(v) != 1
-        error("La suma de los elementos del vector v debe ser 1.")
-    end
-
-    # Calcular el estado de la cadena de Markov en el paso k
-    x = copy(v)
+    # Convertimos las matrices a matrices de Julia
+    A = Array(A)
+    v = Array(v)
+  
+    # Inicializamos el vector x con el vector de probabilidad v
+    x = v
+  
+    # Iteramos sobre los pasos k
     for i in 1:k
-        x = A * x
+      # Multiplicamos el vector x por la matriz A
+      x = A * x
     end
-
+  
+    # Devolvemos el vector x
     return x
-end
+  end
+  
+
+  A = [0.5 0.3; 0.5 0.7]  # Reemplaza esto con tu propia matriz estocástica
+  v = [1.0; 0.0] 
+  k = 10
+  
+  x = markov(A, v, k)
+  
+  println(x)
+  

@@ -28,11 +28,11 @@ end
 
 # Ejemplo de uso:
 # Definimos una matriz estocástica A y un vector de probabilidad v
-A = [0.5 0.3; 0.5 0.7]  # Reemplaza esto con tu propia matriz estocástica
-v = [1.0; 0.0]           # Reemplaza esto con tu propio vector de probabilidad inicial
+A = [0.2 0.1 0.3 0.4; 0.3 0 0.4 0.2; 0.4 0.6 0.3 0.1; 0.1 0.3 0 0.3]  # Reemplaza esto con tu propia matriz estocástica
+v = [0.1, 0.2, 0.3, 0.4]           # Reemplaza esto con tu propio vector de probabilidad inicial
 
 # Realizamos k pasos en la cadena de Markov
-k = 10  # Número de pasos
+k = 6  # Número de pasos
 
 # Llamamos a la función markov
 resultado = markov(A, v, k)
